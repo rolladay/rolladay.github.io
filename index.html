@@ -6,7 +6,7 @@
     <title>Rolladay Inc.</title>
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -14,50 +14,87 @@
             height: 100vh;
             margin: 0;
             background-color: #ffffff;
+            color: #1a1a1a;
         }
         .container {
             text-align: center;
+            padding: 20px;
         }
-        img {
-            width: 200px;
-            height: 200px;
-            object-fit: cover;
-            margin-bottom: 20px;
+        h1 {
+            font-size: 3rem;
+            font-weight: 600;
+            margin-bottom: 10px;
         }
-        .privacy-button {
-            background-color: #4CAF50;
-            border: none;
-            color: white;
-            padding: 15px 32px;
-            text-align: center;
+        p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 50px;
+        }
+        .services {
+            display: flex;
+            gap: 40px; /* 아이콘 사이 간격 */
+            justify-content: center;
+        }
+        .service-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
             text-decoration: none;
-            display: inline-block;
-            font-size: 16px;
-            margin: 4px 2px;
-            cursor: pointer;
+            color: #1a1a1a;
+            transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+        }
+        .service-item:hover {
+            transform: translateY(-5px);
+            color: #007aff; /* 마우스를 올렸을 때 아이콘과 텍스트 색상 */
+        }
+        .service-item svg {
+            width: 64px;
+            height: 64px;
+            margin-bottom: 15px;
+        }
+        .service-item span {
+            font-weight: 500;
         }
         footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            background-color: #333;
-            color: white;
+            position: absolute;
+            bottom: 20px;
+            font-size: 0.9rem;
+            color: #888;
+        }
+        footer a {
+            color: #555;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <img src="https://i.ebayimg.com/images/g/eG8AAOSw7R9cFlbq/s-l1600.webp" alt="Rolladay Inc. 로고">
-        <h1>Rolladay Inc. 의 홈페이지 입니다.</h1>
-        <p>로또킹 및 롤러데이 서비스를 제공합니다.</p>
-        <p>롤러데이의 경우는 지금은 개발자 파업으로 인해 잠시 재정비 중입니다.</p>
-        <p>빠른 시일 내 완료하겠습니다.</p>
-        <a href="privacy-policy.html" class="privacy-button">개인정보처리방침</a>
+        <h1>Rolladay Inc.</h1>
+        <p>We make good product</p>
+
+        <div class="services">
+            <a href="lottoking-terms.html" class="service-item">
+                <!-- Lotto King Icon (Star) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                <span>로또킹</span>
+            </a>
+            <a href="rollerday-terms.html" class="service-item">
+                <!-- Rollerday Icon (Dice) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><circle cx="8.5" cy="8.5" r="1.5"></circle><circle cx="15.5" cy="8.5" r="1.5"></circle><circle cx="15.5" cy="15.5" r="1.5"></circle><circle cx="8.5" cy="15.5" r="1.5"></circle></svg>
+                <span>롤러데이</span>
+            </a>
+            <a href="service-terms.html" class="service-item">
+                <!-- New Service Icon (Plus Circle) -->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+                <span>신규 서비스</span>
+            </a>
+        </div>
     </div>
+
     <footer>
-        Rolladay Inc. | rolladay.cs@gmail.com
+        <a href="privacy-policy.html">개인정보처리방침</a> | rolladay.cs@gmail.com
     </footer>
 </body>
-</html>
